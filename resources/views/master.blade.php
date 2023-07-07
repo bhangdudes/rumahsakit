@@ -26,7 +26,7 @@
         <hr/>
  
         <footer style="text-align: center;"  >
-            <p>Responsi 2 Praktikum Pemeograman Web Lanjut  </p>
+            <p>Project Tugas Akhir Pemrograman Web Lanjut</p>
         </footer>
     </body>
 </html>
