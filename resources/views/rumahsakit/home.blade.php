@@ -5,7 +5,7 @@
 @section('konten')
  <body style="text-align: center;">
     <p>Ini Adalah Halaman Home</p>
-    <p>Selamat datang</p>
+    <p>TUGASMU KERJAKNO FREN</p>
  </body>
  
 @endsection
