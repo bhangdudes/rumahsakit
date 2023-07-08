@@ -13,11 +13,10 @@
     <div class="form-group mt-3">
         <table>
             <tr>
-                <td><label for="no">No Pasien :</label></td>
+                <td><label for="id">Id Pasien:</label></td>
             </tr>
             <tr>
-                <td><input type="number" class="form-control" name="no" 
-                id="no" placeholder="No pasien"></td>
+                <td><input type="number" class="form-control" name="id" id="id" placeholder="Id Pasien"></td>
             </tr>
         </table>
     </div>
@@ -27,8 +26,7 @@
                 <td><label for="nama">Nama Pasien :</label></td>
             </tr>
             <tr>
-                <td><input type="nama" class="form-control" name="nama" 
-                id="nama" placeholder="Nama pasien"></td>
+                <td><input type="nama" class="form-control" name="nama" id="nama" placeholder="Nama pasien"></td>
             </tr>
         </table>
     </div>
@@ -38,8 +36,17 @@
                 <td><label for="umur">Umur Pasien :</label></td>
             </tr>
             <tr>
-                <td><input type="number" class="form-control" name="umur" 
-                id="umur" placeholder="Umur pasien"></td>
+                <td><input type="number" class="form-control" name="umur" id="umur" placeholder="Umur pasien"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group mt-3">
+        <table>
+            <tr>
+                <td><label for="no">No Kamar :</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" class="form-control" name="no" id="no" placeholder="No Kamar"></td>
             </tr>
         </table>
     </div>

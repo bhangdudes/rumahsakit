@@ -14,7 +14,7 @@ class RumahsakitController extends Controller
         $jeniskamar = DB::table('jeniskamar')->paginate(5);
 
         return view('pasien/daftarpasien', ['pasien' => $pasien])
-            ->with('kamar', $kamar) ->with('jeniskamar',$jeniskamar);
+            ->with('kamar/daftarkamar', $kamar) ->with('jeniskamar',$jeniskamar);
   }
 
   public function create()
@@ -25,29 +25,32 @@ class RumahsakitController extends Controller
   public function tambahpasien(Request $request)
   {
     $this->validate($request, [
-      'no' => 'required',
+      'id' => 'required',
       'nama' => 'required',
       'umur' => 'required',
+      'no' => 'required',
 
     ], [
-      'no.required' => 'No pasien tidak boleh kosong.',
+      'id.required' => 'Id Pasien tidak boleh kosong.',
       'nama.required' => 'Nama pasien tidak boleh kosong.',
       'umur.required' => 'Umur pasien tidak boleh kosong.',
-    ]);
+      'no.required' => 'No Kamar tidak boleh kosong.',
+    ]); 
 
     DB::table('pasien')->insert([
-      'nopasien' => $request->no,
-      'namapasien' => $request->nama,
-      'umur' => $request->umur,
+      'id' => $request->id,
+      'nama_pasien' => $request->nama,
+      'umur_pasien' => $request->umur,
+      'no_kamar' => $request->no
     ]);
 
     return redirect('/pasien');
   }
 
-  public function delete(Request $request, $nopasien)
+  public function delete(Request $request, $id)
   {
 
-    DB::table('pasien')->where('nopasien',$nopasien)->delete();
+    DB::table('pasien')->where('id',$id)->delete();
     return redirect('/pasien');
   }
 }

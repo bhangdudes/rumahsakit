@@ -13,25 +13,27 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>No Pasien</th>
+                    <th>Id Pasien</th>
                     <th>Nama Pasien</th>
                     <th>Umur Pasien</th>
+                    <th>Nomor Kamar</th>
                     <th colspan=" 2">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($pasien as $data_pasien)
                 <tr>
-                    <td>{{ $data_pasien->nopasien }}</td>
-                    <td>{{ $data_pasien->namapasien }}</td>
-                    <td>{{ $data_pasien->umur }}</td>
+                    <td>{{ $data_pasien->id }}</td>
+                    <td>{{ $data_pasien->nama_pasien }}</td>
+                    <td>{{ $data_pasien->umur_pasien }}</td>
+                    <td>{{ $data_pasien->no_kamar }}</td>
                     <td>
                         <form action="#" method="Post">
-                            <a class="btn btn-primary" href="/pasien/edit/{{ $data_pasien->nopasien }}">Ubah</a>
+                            <a class="btn btn-primary" href="/pasien/edit/{{ $data_pasien->id }}">Ubah</a>
                         </form>
                     </td>
                     <td>
-                        <form action="/pasien/delete/{{ $data_pasien->nopasien }}" method="post">
+                        <form action="/pasien/delete/{{ $data_pasien->id }}" method="post">
                             @csrf
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
