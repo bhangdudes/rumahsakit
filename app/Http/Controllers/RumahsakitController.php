@@ -14,7 +14,7 @@ class RumahsakitController extends Controller
         $jeniskamar = DB::table('jeniskamar')->paginate(5);
 
         return view('pasien/daftarpasien', ['pasien' => $pasien])
-            ->with('kamar', $kamar) ->with('jeniskamar',$jeniskamar);
+            ->with('kamar/daftarkamar', $kamar) ->with('jeniskamar',$jeniskamar);
   }
 
   public function create()

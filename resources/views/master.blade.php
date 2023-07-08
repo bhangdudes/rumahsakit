@@ -8,7 +8,7 @@
     <body>
             <a class="active" href="<?php echo url('/home') ?>">HOME</a>
             <a href="<?php echo url('/pasien') ?>">Data Pasien</a>
-            <a href="<?php echo url('/pasien') ?>">Data Kamar</a>
+            <a href="<?php echo url('/kamar') ?>">Data Kamar</a>
             <a href="<?php echo url('/pasien') ?>">Data Jenis Kamar</a>
             <a href="<?php echo url('/tentang') ?>">Tentang Kami</a>
             <a href="<?php echo url('/kontak') ?>">Kontak</a>

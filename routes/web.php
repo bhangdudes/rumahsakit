@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KamarController;
+use App\Http\Controllers\RumahsakitController;
+
 
 Route::get('/', function () {
     return view('master');
@@ -12,7 +16,7 @@ Route::get('/jeniskamar', function () {
     return view('jeniskamar/jeniskamar');
 });
 Route::get('/kamar', function () {
-    return view('kamar/kamar');
+    return view('kamar/daftarkamar');
 });
 Route::get('/pasien', function () {
     return view('pasien/daftarpasien');
@@ -27,4 +31,5 @@ Route::get('/tentang', function () {
 Route::get('/pasien','App\Http\Controllers\RumahsakitController@index');
 Route::get('/pasien/create', 'App\Http\Controllers\RumahsakitController@create')->name('pasien.create');
 Route::post('/pasien/tambahpasien', 'App\Http\Controllers\RumahsakitController@tambahpasien');
-Route::post('/pegawai/delete/{id}','App\Http\Controllers\PegawaiController@delete');
+
+Route::get('/kamar','App\Http\Controllers\KamarController@index');
