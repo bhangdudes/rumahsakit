@@ -27,4 +27,4 @@ Route::get('/tentang', function () {
 Route::get('/pasien','App\Http\Controllers\RumahsakitController@index');
 Route::get('/pasien/create', 'App\Http\Controllers\RumahsakitController@create')->name('pasien.create');
 Route::post('/pasien/tambahpasien', 'App\Http\Controllers\RumahsakitController@tambahpasien');
-Route::post('/pegawai/delete/{id}','App\Http\Controllers\PegawaiController@delete');
+Route::post('/pegawai/delete/{id}','App\Http\Controllers\RumahsakitController@delete');
