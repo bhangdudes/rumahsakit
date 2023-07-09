@@ -33,3 +33,5 @@ Route::get('/pasien/create', 'App\Http\Controllers\RumahsakitController@create')
 Route::post('/pasien/tambahpasien', 'App\Http\Controllers\RumahsakitController@tambahpasien');
 Route::post('/pasien/delete/{id}','App\Http\Controllers\RumahsakitController@delete');
 Route::get('/kamar','App\Http\Controllers\KamarController@index');
+Route::get('/kamar/create', 'App\Http\Controllers\KamarController@create')->name('kamar.create');
+Route::post('/kamar/tambahkamar', 'App\Http\Controllers\KamarController@tambahkamar');

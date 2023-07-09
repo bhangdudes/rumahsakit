@@ -12,8 +12,37 @@ class KamarController extends Controller
     public function index()
 {
   $kamar = DB::table('kamar')->paginate(5);
+
   return view('kamar/daftarkamar',['kamar' => $kamar]);
 
+}
+
+public function create()
+{
+  return view('kamar/tambahkamar');
+}
+
+public function tambahkamar(Request $request)
+{
+  $this->validate($request, [
+    'id' => 'required',
+    'nama' => 'required',
+    'jenis' => 'required',
+
+  ], [
+    'id.required' => 'Id Kamar tidak boleh kosong.',
+    'nama.required' => 'Nama Kamar tidak boleh kosong.',
+    'jenis.required' => 'Jenis Kamar tidak boleh kosong.',
+
+  ]); 
+
+  DB::table('kamar')->insert([
+    'id' => $request->id,
+    'nama_kamar' => $request->nama,
+    'id_jeniskamar' => $request->jenis
+  ]);
+
+  return redirect('/kamar');
 }
 
 public function edit($id){
@@ -42,23 +71,7 @@ public function update(Request $request){
   return redirect('/daftarkamar');
 }
 
-public function tambah_buku(Request $request)
-  {
-    $this->validate($request,[
-      'nama' => 'required|min:1|max:35',
-      'jenis' => 'required|min:1',
-    ]);
-    $data = [
-            'nama_kamar' => $request->nama,
-            'id_jeniskamar' => $request->jenis,
-        ];
 
-    DB::table('kamar')->insert([
-      'nama_kamar' => $request->nama,
-      'id_jeniskamar' => $request->jenis,
-    ]);
-    return redirect('/daftarkamar');
-  }
 
   public function delete(Request $request, $id){
     //Menghapus data dari database berdasarkan id yang telah dikirim

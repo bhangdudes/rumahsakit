@@ -15,6 +15,7 @@ class RumahsakitController extends Controller
 
         return view('pasien/daftarpasien', ['pasien' => $pasien])
             ->with('kamar/daftarkamar', $kamar) ->with('jeniskamar',$jeniskamar);
+
   }
 
   public function create()
