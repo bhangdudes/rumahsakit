@@ -32,6 +32,11 @@ Route::get('/pasien','App\Http\Controllers\RumahsakitController@index');
 Route::get('/pasien/create', 'App\Http\Controllers\RumahsakitController@create')->name('pasien.create');
 Route::post('/pasien/tambahpasien', 'App\Http\Controllers\RumahsakitController@tambahpasien');
 Route::post('/pasien/delete/{id}','App\Http\Controllers\RumahsakitController@delete');
+//membuat edit pasien
+Route::get('/pasien/edit/{id}', 'App\Http\Controllers\RumahsakitController@edit');
+//setelah edit (update)
+Route::post('/pasien/update', 'App\Http\Controllers\RumahsakitController@update');
+
 Route::get('/kamar','App\Http\Controllers\KamarController@index');
 Route::get('/kamar/create', 'App\Http\Controllers\KamarController@create')->name('kamar.create');
 Route::post('/kamar/tambahkamar', 'App\Http\Controllers\KamarController@tambahkamar');
