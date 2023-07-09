@@ -21,15 +21,19 @@ Route::get('/kamar', function () {
 Route::get('/pasien', function () {
     return view('pasien/daftarpasien');
 });
-Route::get('/kontak', function () { 
+Route::get('/kontak', function () {
     return view('rumahsakit/kontak');
 });
 Route::get('/tentang', function () {
     return view('rumahsakit/tentang');
 });
 
-Route::get('/pasien','App\Http\Controllers\RumahsakitController@index');
+Route::get('/pasien', 'App\Http\Controllers\RumahsakitController@index');
 Route::get('/pasien/create', 'App\Http\Controllers\RumahsakitController@create')->name('pasien.create');
 Route::post('/pasien/tambahpasien', 'App\Http\Controllers\RumahsakitController@tambahpasien');
-Route::post('/pasien/delete/{id}','App\Http\Controllers\RumahsakitController@delete');
-Route::get('/kamar','App\Http\Controllers\KamarController@index');
+Route::post('/pasien/delete/{id}', 'App\Http\Controllers\RumahsakitController@delete');
+Route::get('/kamar', 'App\Http\Controllers\KamarController@index');
+//membuat edit pasien
+Route::get('/pasien/edit/{id}', 'App\Http\Controllers\RumahsakitController@edit');
+//setelah edit (update)
+Route::post('/pasien/update', 'App\Http\Controllers\RumahsakitController@update');
