@@ -39,7 +39,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="/daftarkamar/delete/{{ $data_kamar->id }}" method="post">
+                            <form action="/kamar/delete/{{ $data_kamar->id }}" method="post">
                                 @csrf
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>

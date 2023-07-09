@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\RumahsakitController;
+use App\Http\Controllers\JeniskamarController;
 
 
 Route::get('/', function () {
@@ -37,6 +38,13 @@ Route::get('/pasien/edit/{id}', 'App\Http\Controllers\RumahsakitController@edit'
 //setelah edit (update)
 Route::post('/pasien/update', 'App\Http\Controllers\RumahsakitController@update');
 
+//tampildata kamar
 Route::get('/kamar','App\Http\Controllers\KamarController@index');
 Route::get('/kamar/create', 'App\Http\Controllers\KamarController@create')->name('kamar.create');
 Route::post('/kamar/tambahkamar', 'App\Http\Controllers\KamarController@tambahkamar');
+Route::post('/kamar/delete/{id}','App\Http\Controllers\KamarController@delete');
+
+//jeniskamar
+Route::get('/jeniskamar','App\Http\Controllers\JeniskamarController@index');
+Route::get('/jeniskamar/create', 'App\Http\Controllers\JeniskamarController@create')->name('jeniskamar.create');
+Route::post('/jenis/tambahjeniskamar', 'App\Http\Controllers\JeniskamarController@tambahkamar');

@@ -79,7 +79,7 @@ public function update(Request $request){
 
 
     //Setelah hapus berhasil, kembali ke halaman data buku di halaman sesuai dengan terakhir dibuka
-    return redirect('/daftarkamar?page='.$request->page);
+    return redirect('/kamar'.$request->page);
 }
 
 }
