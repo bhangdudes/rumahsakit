@@ -6,7 +6,6 @@
     @endforeach
 </div>
 @endif
-
 <form action="/jeniskamar/tambahjeniskamar" method="post">
     @csrf
     <div class="form-group mt-3">
