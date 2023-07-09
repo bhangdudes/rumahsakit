@@ -47,4 +47,4 @@ Route::post('/kamar/delete/{id}','App\Http\Controllers\KamarController@delete');
 //jeniskamar
 Route::get('/jeniskamar','App\Http\Controllers\JeniskamarController@index');
 Route::get('/jeniskamar/create', 'App\Http\Controllers\JeniskamarController@create')->name('jeniskamar.create');
-Route::post('/jenis/tambahjeniskamar', 'App\Http\Controllers\JeniskamarController@tambahkamar');
+Route::post('/jeniskamar/tambahjeniskamar', 'App\Http\Controllers\JeniskamarController@tambahjeniskamar');
