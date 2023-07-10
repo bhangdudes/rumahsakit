@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('judul_halaman')
-
-@section('konten')
-
 <h2 style="text-align: center;">Data Kamar</h2>
 <p style="text-align: center;">List Kamar di Rumah Sakit</p>
+@endsection
+
+@section('konten')
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <a href="<?php echo url('/tambahpegawai') ?>" class="btn btn-primary" style="margin-left: 65px; margin-bottom: 20px">Tambah Data Kamar</a>
+    <a href="{{ route('kamar.create') }}" class="btn btn-primary" style="margin-left: 65px; margin-bottom: 20px">Tambah Data Kamar</a>
     <div class="container mt-4">
         <div class="card mb-3">
             <table class="table table-striped">
@@ -39,7 +39,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="/daftarkamar/delete/{{ $data_kamar->id }}" method="post">
+                            <form action="/kamar/delete/{{ $data_kamar->id }}" method="post">
                                 @csrf
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
