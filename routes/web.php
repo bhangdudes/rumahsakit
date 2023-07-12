@@ -53,7 +53,7 @@ Route::get('/', function () {
    
    
     if(Auth::check()) {
-        return view('blog/home', ['nama' => 'Azzam']);
+        return view('auth/login', ['nama' => 'teddy']);
     } else {
         return view('auth/login');
     }
