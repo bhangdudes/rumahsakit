@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\RumahsakitController;
 use App\Http\Controllers\JeniskamarController;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', function () {
@@ -48,3 +49,30 @@ Route::post('/kamar/delete/{id}','App\Http\Controllers\KamarController@delete');
 Route::get('/jeniskamar','App\Http\Controllers\JeniskamarController@index');
 Route::get('/jeniskamar/create', 'App\Http\Controllers\JeniskamarController@create')->name('jeniskamar.create');
 Route::post('/jeniskamar/tambahjeniskamar', 'App\Http\Controllers\JeniskamarController@tambahjeniskamar');
+Route::get('/', function () { 
+   
+   
+    if(Auth::check()) {
+        return view('blog/home', ['nama' => 'Azzam']);
+    } else {
+        return view('auth/login');
+    }
+});
+
+
+//route mengarah ke halaman login di views/auth/login.blade.php
+Route::get('/login', function () {
+    return view('auth/login');
+});
+
+
+
+
+
+//route untuk proses login
+Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
+//route untuk logout
+Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
+
+
+
