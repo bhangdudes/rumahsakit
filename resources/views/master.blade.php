@@ -17,6 +17,7 @@
         <a href="<?php echo url('/jeniskamar') ?>">Data Jenis Kamar</a>
         <a href="<?php echo url('/tentang') ?>">Tentang Kami</a>
         <a href="<?php echo url('/kontak') ?>">Kontak</a>
+        <a href="<?php echo url('/logout') ?>">LOGOUT</a>   
         <br />
         <br />
     </body>
