@@ -28,7 +28,7 @@ main {
     justify-content: center;
     height: 75vh;
     width: 100%;
-    background: url(home.jpg) no-repeat center center;
+    background: url(10130.jpg) no-repeat center center;
     background-size: cover;
 }
 .form_class {
