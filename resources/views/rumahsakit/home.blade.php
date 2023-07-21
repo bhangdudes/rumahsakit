@@ -1,11 +1,8 @@
 @extends('master')
- 
-@section('judul_halaman', 'Halaman Home')
 
 @section('konten')
  <body style="text-align: center;">
-    <p>Ini Adalah Halaman Home</p>
-    <p>TUGASMU KERJAKNO FREN</p>
+ <img src = "10130.jpg" width="60%">
  </body>
  
 @endsection
