@@ -41,7 +41,7 @@ public function tambahjeniskamar(Request $request)
     'kelas' => $request->kelas
   ]);
 
-  return redirect('/kamar');
+  return redirect('/jeniskamar');
 }
 
 
