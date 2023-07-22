@@ -35,7 +35,7 @@
                 <td><label for="jenis">Jenis Kamar</label></td>
             </tr>
             <tr>
-                <td><input type="number" class="form-control" name="jenis" id="jenis" placeholder="Jenis Kamar"></td>
+                <td><input type="text" class="form-control" name="jenis" id="jenis" placeholder="Jenis Kamar"></td>
             </tr>
         </table>
     </div>
