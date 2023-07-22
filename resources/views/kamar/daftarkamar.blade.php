@@ -35,7 +35,7 @@
                         <td>{{ $data_kamar->id_jeniskamar }}</td>
                         <td>
                             <form action="#" method="Post">
-                                <a class="btn btn-primary" href="/daftarkamar/edit/{{ $data_kamar->id }}">Ubah</a>
+                                <a class="btn btn-primary" href="/kamar/edit/{{ $data_kamar->id }}">Ubah</a>
                             </form>
                         </td>
                         <td>

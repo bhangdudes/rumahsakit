@@ -49,7 +49,7 @@ public function edit($id){
   //Untuk mengambil data dari database berdasarkan id
   $kamar = DB::table('kamar')->where('id',$id)->get();
   //Akses halaman edit dan mengirim data buku sesuai id
-  return view('kamar/edit_daftar_kamar',['kamar' => $kamar]);
+  return view('kamar/editkamar',['kamar' => $kamar]);
 }
 
 public function update(Request $request){
@@ -68,7 +68,7 @@ public function update(Request $request){
      'id_jeniskamar' => $request->jenis,
   ]);
    
-  return redirect('/daftarkamar');
+  return redirect('/kamar');
 }
 
 

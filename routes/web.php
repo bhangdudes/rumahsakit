@@ -44,11 +44,23 @@ Route::get('/kamar','App\Http\Controllers\KamarController@index');
 Route::get('/kamar/create', 'App\Http\Controllers\KamarController@create')->name('kamar.create');
 Route::post('/kamar/tambahkamar', 'App\Http\Controllers\KamarController@tambahkamar');
 Route::post('/kamar/delete/{id}','App\Http\Controllers\KamarController@delete');
+//membuat edit pasien
+Route::get('/kamar/edit/{id}', 'App\Http\Controllers\KamarController@edit');
+//setelah edit (update)
+Route::post('/kamar/update', 'App\Http\Controllers\KamarController@update');
+
 
 //jeniskamar
 Route::get('/jeniskamar','App\Http\Controllers\JeniskamarController@index');
 Route::get('/jeniskamar/create', 'App\Http\Controllers\JeniskamarController@create')->name('jeniskamar.create');
 Route::post('/jeniskamar/tambahjeniskamar', 'App\Http\Controllers\JeniskamarController@tambahjeniskamar');
+Route::post('/jeniskamar/delete/{id}','App\Http\Controllers\JeniskamarController@delete');
+//membuat edit pasien
+Route::get('/jeniskamar/edit/{id}', 'App\Http\Controllers\JeniskamarController@edit');
+//setelah edit (update)
+Route::post('/jeniskamar/update', 'App\Http\Controllers\JeniskamarController@update');
+
+
 Route::get('/', function () { 
    
    

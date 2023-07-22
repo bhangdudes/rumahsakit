@@ -26,7 +26,7 @@
                         <td>{{ $data_jeniskamar->kelas }}</td>
                         <td>
                             <form action="#" method="Post">
-                                <a class="btn btn-primary" href="/daftarjeniskamar/edit/{{ $data_jeniskamar->id }}">Ubah</a>
+                                <a class="btn btn-primary" href="/jeniskamar/edit/{{ $data_jeniskamar->id }}">Ubah</a>
                             </form>
                         </td>
                         <td>

@@ -25,19 +25,19 @@ public function tambahjeniskamar(Request $request)
 {
   $this->validate($request, [
     'id' => 'required',
-    'kode' => 'required',
+    'kode_kelas' => 'required',
     'kelas' => 'required',
 
   ], [
     'id.required' => 'Id Jenis Kamar tidak boleh kosong.',
-    'kode.required' => 'Kode Kelas tidak boleh kosong.',
+    'kode_kelas.required' => 'Kode Kelas tidak boleh kosong.',
     'kelas.required' => 'Kelas tidak boleh kosong.',
 
   ]); 
 
   DB::table('jeniskamar')->insert([
     'id' => $request->id,
-    'kode_kelas' => $request->kode,
+    'kode_kelas' => $request->kode_kelas,
     'kelas' => $request->kelas
   ]);
 
@@ -51,7 +51,7 @@ public function edit($id){
   //Untuk mengambil data dari database berdasarkan id
   $jeniskamar = DB::table('jeniskamar')->where('id',$id)->get();
   //Akses halaman edit dan mengirim data buku sesuai id
-  return view('kamar/edit_daftar_jeniskamar',['jeniskamar' => $jeniskamar]);
+  return view('jeniskamar/editjeniskamar',['jeniskamar' => $jeniskamar]);
 }
 
 public function update(Request $request){
@@ -70,7 +70,7 @@ public function update(Request $request){
      'kelas' => $request->kelas,
   ]);
    
-  return redirect('/daftarjeniskamar');
+  return redirect('/jeniskamar');
 }
 
 
