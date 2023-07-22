@@ -25,7 +25,7 @@
                 <td><label for="kode">Kode Kelas</label></td>
             </tr>
             <tr>
-                <td><input type="number" class="form-control" name="kode" id="kode" placeholder="Kode Kelas"></td>
+                <td><input type="text" class="form-control" name="kode_kelas" id="kode" placeholder="Kode Kelas"></td>
             </tr>
         </table>
     </div>
