@@ -8,9 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/topnav.css">
 </head>
+<body>
 <div class="topnav">
-
-    <body>
         <a class="active" href="<?php echo url('/home') ?>">HOME</a>
         <a href="<?php echo url('/pasien') ?>">Data Pasien</a>
         <a href="<?php echo url('/kamar') ?>">Data Kamar</a>
@@ -20,7 +19,6 @@
         <a href="<?php echo url('/logout') ?>">LOGOUT</a>   
         <br />
         <br />
-    </body>
 </div>
 
 <h3> @yield('judul_halaman') </h3>

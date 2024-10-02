@@ -76,11 +76,6 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('auth/login');
 });
-
-
-
-
-
 //route untuk proses login
 Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 //route untuk logout
